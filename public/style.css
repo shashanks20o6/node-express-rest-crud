@@ -1,0 +1,214 @@
+/* public/style.css */
+
+/* --- CSS Variables for Easy Customization --- */
+:root {
+  --bg-color: #faf6f0;
+  --card-bg: #ffffff;
+  --primary-color: #800000; /* Maroon */
+  --accent-color: #e07a5f;  /* Warm terracotta */
+  --text-dark: #2d3142;
+  --text-light: #4f5d75;
+  --border-radius: 12px;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --transition: all 0.3s ease;
+}
+
+/* --- Base Resets & Layout --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-dark);
+  line-height: 1.6;
+  padding: 2rem 1rem;
+}
+
+.container {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.08);
+  margin: 1.5rem 0;
+}
+
+/* --- Navigation & Links --- */
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+/* --- Post Cards --- */
+.postings {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  transition: var(--transition);
+}
+
+.postings:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Username Style */
+.post-author {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-transform: lowercase;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.post-author::before {
+  content: "@";
+  opacity: 0.6;
+}
+
+/* Content Style */
+.post-content {
+  font-size: 1.05rem;
+  color: var(--text-dark);
+  margin-bottom: 1.2rem;
+}
+
+.post-id {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  font-family: monospace;
+  margin-bottom: 1rem;
+}
+
+/* --- Actions & Buttons --- */
+.post-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding-top: 0.8rem;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+button:hover {
+  background-color: #5a0000;
+  transform: translateY(-1px);
+}
+
+.btn-delete {
+  background: none;
+  color: #e63946;
+  border: none;
+  padding: 0;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-delete:hover {
+  color: #b80000;
+  background: none;
+  transform: none;
+}
+
+.btn-create-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.btn-create {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 10px rgba(224, 122, 95, 0.3);
+}
+
+.btn-create:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* --- Forms & Inputs --- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+label {
+  font-weight: 600;
+  color: var(--text-dark);
+  font-size: 0.95rem;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1.5px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: #fff;
+  transition: var(--transition);
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(224, 122, 95, 0.15);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}

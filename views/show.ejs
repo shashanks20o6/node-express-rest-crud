@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Post</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Post Details</h2>
+        <div class="postings">
+            <div class="post-id">Post ID: <%= post.id %></div>
+            <div class="post-author"><%= post.username %></div>
+            <div class="post-content" style="font-size: 1.25rem;"><%= post.content %></div>
+        </div>
+        <a href="/posts">← Back to Feed</a>
+    </div>
+</body>
+</html>
