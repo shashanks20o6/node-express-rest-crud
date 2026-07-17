@@ -1,11 +1,9 @@
-/* public/style.css */
 
-/* --- CSS Variables for Easy Customization --- */
 :root {
   --bg-color: #faf6f0;
   --card-bg: #ffffff;
-  --primary-color: #800000; /* Maroon */
-  --accent-color: #e07a5f;  /* Warm terracotta */
+  --primary-color: #800000; 
+  --accent-color: #e07a5f;  
   --text-dark: #2d3142;
   --text-light: #4f5d75;
   --border-radius: 12px;
@@ -13,7 +11,7 @@
   --transition: all 0.3s ease;
 }
 
-/* --- Base Resets & Layout --- */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -53,7 +51,7 @@ hr {
   margin: 1.5rem 0;
 }
 
-/* --- Navigation & Links --- */
+
 a {
   color: var(--accent-color);
   text-decoration: none;
@@ -81,7 +79,7 @@ a:hover {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
-/* Username Style */
+/* Usernae Style */
 .post-author {
   font-size: 0.9rem;
   font-weight: 700;
@@ -112,7 +110,7 @@ a:hover {
   margin-bottom: 1rem;
 }
 
-/* --- Actions & Buttons --- */
+/* Actions & Buttons  */
 .post-actions {
   display: flex;
   align-items: center;
@@ -176,7 +174,7 @@ button:hover {
   transform: translateY(-2px);
 }
 
-/* --- Forms & Inputs --- */
+/*Forms & Inputs*/
 form {
   display: flex;
   flex-direction: column;
